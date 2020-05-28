@@ -1,0 +1,217 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<ClassDiagram name="delaytransports">
+  <ClassDiagramComponents>
+    <Class name="DelayBus" package="delaytransports" visibility="public" xPosition="20.0" yPosition="20.0">
+      <Fields>
+        <Field name="emissions" type="int" visibility="private" isFinal="true"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public">
+          <Argument type="int" name="delay"/>
+          <Argument type="String" name="vehicleType"/>
+          <Argument type="int" name="lineNumber"/>
+          <Argument type="int" name="direction"/>
+          <Argument type="int" name="stopID"/>
+          <Argument type="int" name="weekDay"/>
+          <Argument type="String" name="date"/>
+          <Argument type="String" name="hour"/>
+          <Argument type="int" name="emissions"/>
+        </Constructor>
+      </Constructors>
+      <Methods>
+        <Method name="getDelay" returnType="int" visibility="public"/>
+        <Method name="getVehicleType" returnType="String" visibility="public"/>
+        <Method name="getLineNumber" returnType="int" visibility="public"/>
+        <Method name="getDirection" returnType="int" visibility="public"/>
+        <Method name="getStopID" returnType="int" visibility="public"/>
+        <Method name="getWeekDay" returnType="int" visibility="public"/>
+        <Method name="getDate" returnType="String" visibility="public"/>
+        <Method name="getHour" returnType="String" visibility="public"/>
+      </Methods>
+    </Class>
+    <Class name="Delays" package="delaytransports" visibility="public" xPosition="320.0" yPosition="20.0">
+      <Fields>
+        <Field name="DelayTransport" type="DelayTransport[]" visibility="private" isStatic="true"/>
+        <Field name="Lines" type="int[]" visibility="private" isStatic="true"/>
+        <Field name="Dates" type="String[]" visibility="private" isStatic="true"/>
+        <Field name="AvgDelayDisplay" type="javax.swing.JTextField" visibility="private"/>
+        <Field name="FileChooser" type="javax.swing.JFileChooser" visibility="private"/>
+        <Field name="FileDisplay" type="javax.swing.JTextField" visibility="private"/>
+        <Field name="FilePicker" type="javax.swing.JButton" visibility="private"/>
+        <Field name="GetDelayButton" type="javax.swing.JButton" visibility="private"/>
+        <Field name="MaxDatePicker" type="javax.swing.JComboBox" visibility="private"/>
+        <Field name="MaxDelayDisplay" type="javax.swing.JTextField" visibility="private"/>
+        <Field name="MaxDirectionPicker" type="javax.swing.JComboBox" visibility="private"/>
+        <Field name="MaxHourPicker" type="javax.swing.JComboBox" visibility="private"/>
+        <Field name="MaxLineNumberPicker" type="javax.swing.JComboBox" visibility="private"/>
+        <Field name="MaxStopIDPicker" type="javax.swing.JComboBox" visibility="private"/>
+        <Field name="MaxWeekDayPicker" type="javax.swing.JComboBox" visibility="private"/>
+        <Field name="MinDatePicker" type="javax.swing.JComboBox" visibility="private"/>
+        <Field name="MinDelayDisplay" type="javax.swing.JTextField" visibility="private"/>
+        <Field name="MinDirectionPicker" type="javax.swing.JComboBox" visibility="private"/>
+        <Field name="MinHourPicker" type="javax.swing.JComboBox" visibility="private"/>
+        <Field name="MinLineNumberPicker" type="javax.swing.JComboBox" visibility="private"/>
+        <Field name="MinStopIDPicker" type="javax.swing.JComboBox" visibility="private"/>
+        <Field name="MinWeekDayPicker" type="javax.swing.JComboBox" visibility="private"/>
+        <Field name="Table" type="javax.swing.JTable" visibility="private"/>
+        <Field name="VehicleSelect" type="javax.swing.JList&lt;String&gt;" visibility="private"/>
+        <Field name="jLabel1" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="jLabel10" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="jLabel11" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="jLabel12" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="jLabel13" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="jLabel2" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="jLabel3" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="jLabel4" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="jLabel5" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="jLabel6" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="jLabel7" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="jLabel8" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="jLabel9" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="jPanel1" type="javax.swing.JPanel" visibility="private"/>
+        <Field name="jPanel2" type="javax.swing.JPanel" visibility="private"/>
+        <Field name="jScrollPane1" type="javax.swing.JScrollPane" visibility="private"/>
+        <Field name="jScrollPane3" type="javax.swing.JScrollPane" visibility="private"/>
+        <Field name="jTabbedPane2" type="javax.swing.JTabbedPane" visibility="private"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public"/>
+      </Constructors>
+      <Methods>
+        <Method name="readDelays" returnType="void" visibility="public" isStatic="true">
+          <Argument type="String" name="filename"/>
+        </Method>
+        <Method name="getData" returnType="void" visibility="public" isStatic="true"/>
+        <Method name="initComponents" returnType="// &lt;editor-fold defaultstate=&quot;collapsed&quot; desc=&quot;Generated Code&quot;&gt;//GEN-BEGIN:initComponents
+void" visibility="private"/>
+        <Method name="FilePickerMouseReleased" returnType="void" visibility="private">
+          <Argument type="java.awt.event.MouseEvent" name="evt"/>
+        </Method>
+        <Method name="MinLineNumberPickerItemStateChanged" returnType="void" visibility="private">
+          <Argument type="java.awt.event.ItemEvent" name="evt"/>
+        </Method>
+        <Method name="MinDirectionPickerItemStateChanged" returnType="void" visibility="private">
+          <Argument type="java.awt.event.ItemEvent" name="evt"/>
+        </Method>
+        <Method name="MinStopIDPickerItemStateChanged" returnType="void" visibility="private">
+          <Argument type="java.awt.event.ItemEvent" name="evt"/>
+        </Method>
+        <Method name="MinWeekDayPickerItemStateChanged" returnType="void" visibility="private">
+          <Argument type="java.awt.event.ItemEvent" name="evt"/>
+        </Method>
+        <Method name="MinDatePickerItemStateChanged" returnType="void" visibility="private">
+          <Argument type="java.awt.event.ItemEvent" name="evt"/>
+        </Method>
+        <Method name="MinHourPickerItemStateChanged" returnType="void" visibility="private">
+          <Argument type="java.awt.event.ItemEvent" name="evt"/>
+        </Method>
+        <Method name="GetDelayButtonMouseReleased" returnType="void" visibility="private">
+          <Argument type="java.awt.event.MouseEvent" name="evt"/>
+        </Method>
+        <Method name="main" returnType="void" visibility="public" isStatic="true">
+          <Argument type="String" name="args"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Class name="DelayTram" package="delaytransports" visibility="public" xPosition="620.0" yPosition="20.0">
+      <Fields>
+        <Field name="power" type="int" visibility="private" isFinal="true"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public">
+          <Argument type="int" name="delay"/>
+          <Argument type="String" name="vehicleType"/>
+          <Argument type="int" name="lineNumber"/>
+          <Argument type="int" name="direction"/>
+          <Argument type="int" name="stopId"/>
+          <Argument type="int" name="weekDay"/>
+          <Argument type="String" name="date"/>
+          <Argument type="String" name="hour"/>
+          <Argument type="int" name="power"/>
+        </Constructor>
+      </Constructors>
+      <Methods>
+        <Method name="getDelay" returnType="int" visibility="public"/>
+        <Method name="getVehicleType" returnType="String" visibility="public"/>
+        <Method name="getLineNumber" returnType="int" visibility="public"/>
+        <Method name="getDirection" returnType="int" visibility="public"/>
+        <Method name="getStopID" returnType="int" visibility="public"/>
+        <Method name="getWeekDay" returnType="int" visibility="public"/>
+        <Method name="getDate" returnType="String" visibility="public"/>
+        <Method name="getHour" returnType="String" visibility="public"/>
+      </Methods>
+    </Class>
+    <Class name="DelayTransport" package="delaytransports" visibility="public" isAbstract="true" xPosition="920.0" yPosition="20.0">
+      <Fields>
+        <Field name="delay" type="int" visibility="protected"/>
+        <Field name="vehicleType" type="String" visibility="protected"/>
+        <Field name="lineNumber" type="int" visibility="protected"/>
+        <Field name="direction" type="int" visibility="protected"/>
+        <Field name="stopID" type="int" visibility="protected"/>
+        <Field name="weekDay" type="int" visibility="protected"/>
+        <Field name="date" type="String" visibility="protected"/>
+        <Field name="hour" type="String" visibility="protected"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public">
+          <Argument type="int" name="delay"/>
+          <Argument type="String" name="vehicleType"/>
+          <Argument type="int" name="lineNumber"/>
+          <Argument type="int" name="direction"/>
+          <Argument type="int" name="stopId"/>
+          <Argument type="int" name="weekDay"/>
+          <Argument type="String" name="date"/>
+          <Argument type="String" name="hour"/>
+        </Constructor>
+      </Constructors>
+      <Methods>
+        <Method name="getDelay" returnType="int" visibility="public" isAbstract="true"/>
+        <Method name="getVehicleType" returnType="String" visibility="public" isAbstract="true"/>
+        <Method name="getLineNumber" returnType="int" visibility="public" isAbstract="true"/>
+        <Method name="getDirection" returnType="int" visibility="public" isAbstract="true"/>
+        <Method name="getStopID" returnType="int" visibility="public" isAbstract="true"/>
+        <Method name="getWeekDay" returnType="int" visibility="public" isAbstract="true"/>
+        <Method name="getDate" returnType="String" visibility="public" isAbstract="true"/>
+        <Method name="getHour" returnType="String" visibility="public" isAbstract="true"/>
+        <Method name="compareTo" returnType="int" visibility="public">
+          <Argument type="DelayTransport" name="t"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Class name="DelayTrolley" package="delaytransports" visibility="public" xPosition="1220.0" yPosition="20.0">
+      <Fields>
+        <Field name="floors" type="int" visibility="private" isFinal="true"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public">
+          <Argument type="int" name="delay"/>
+          <Argument type="String" name="vehicleType"/>
+          <Argument type="int" name="lineNumber"/>
+          <Argument type="int" name="direction"/>
+          <Argument type="int" name="stopID"/>
+          <Argument type="int" name="weekDay"/>
+          <Argument type="String" name="date"/>
+          <Argument type="String" name="hour"/>
+          <Argument type="int" name="floors"/>
+        </Constructor>
+      </Constructors>
+      <Methods>
+        <Method name="getDelay" returnType="int" visibility="public"/>
+        <Method name="getVehicleType" returnType="String" visibility="public"/>
+        <Method name="getLineNumber" returnType="int" visibility="public"/>
+        <Method name="getDirection" returnType="int" visibility="public"/>
+        <Method name="getStopID" returnType="int" visibility="public"/>
+        <Method name="getWeekDay" returnType="int" visibility="public"/>
+        <Method name="getDate" returnType="String" visibility="public"/>
+        <Method name="getHour" returnType="String" visibility="public"/>
+      </Methods>
+    </Class>
+  </ClassDiagramComponents>
+  <ClassDiagramRelations>
+    <IsRelation name="is" source="delaytransports.DelayTrolley" target="delaytransports.DelayTransport"/>
+    <UseRelation source="delaytransports.DelayTransport" target="delaytransports.DelayTransport" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <IsRelation name="is" source="delaytransports.DelayTram" target="delaytransports.DelayTransport"/>
+    <IsRelation name="is" source="delaytransports.DelayBus" target="delaytransports.DelayTransport"/>
+  </ClassDiagramRelations>
+</ClassDiagram>
